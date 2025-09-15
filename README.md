@@ -127,10 +127,10 @@ This executes:
 
 ## Expectation validation
 
-## Calculating Metrics: 100%   41/41 [00:00<00:00, 491.16it/s]
+ Calculating Metrics: 100%   41/41 [00:00<00:00, 491.16it/s]
 ## Validation successful: True
-## Number of expectations: 21
-## Successful expectations: 21/21
+ Number of expectations: 21
+ Successful expectations: 21/21
 
 ## Data drift result
 <img src="artifacts/Screenshot 2025-09-15 230446.png" alt="Confusion Matrix" width="400"/>
@@ -175,33 +175,6 @@ The platform generates comprehensive reports and artifacts:
 ### Visualization Configuration
 - Chart styling and themes
 - Output formats and resolutions
-
-## 🧪 Testing
-
-Execute the test suite:
-
-```bash
-python -m pytest tests/
-```
-
-## 📚 Dependencies
-
-### Core Dependencies
-- **pandas** (1.5.0+): Data manipulation and analysis
-- **numpy** (1.21.0+): Numerical computing
-- **scikit-learn** (1.1.0+): Machine learning algorithms
-- **matplotlib** (3.5.0+): Data visualization
-- **seaborn** (0.11.0+): Statistical visualization
-
-### Validation & Monitoring
-- **great-expectations** (0.17.0+): Data validation framework
-- **evidently** (0.2.0+): ML monitoring and drift detection
-
-### Utilities
-- **jupyter** (1.0.0+): Interactive development
-- **requests** (2.28.0+): HTTP client
-- **pyarrow** (12.0.0+): Data serialization
-- **pyyaml**: Configuration management
 
 
 ## 📊 Example Reports
