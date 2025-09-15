@@ -1,0 +1,38 @@
+# Data Anchor Project Configuration
+
+# Data paths
+data:
+  raw_data_path: "../Data_Set/Titanic-Dataset.csv"
+  processed_data_path: "data/processed/"
+  reference_data_path: "data/reference/"
+  reports_path: "reports/"
+
+# Model configuration
+model:
+  test_size: 0.3
+  random_state: 42
+  target_column: "Survived"
+  features:
+    numerical: ['Age', 'SibSp', 'Parch', 'Fare']
+    categorical: ['Sex', 'Embarked', 'Pclass']
+
+# Data validation
+validation:
+  suite_name: "titanic_validation_suite"
+  expectations:
+    - table_columns_match
+    - column_existence
+    - data_quality
+    - missing_values
+
+# Drift detection
+drift:
+  reference_dataset: "data/reference.parquet"
+  current_dataset: "data/current.parquet"
+  report_name: "drift_report.html"
+
+# Visualization
+visualization:
+  figure_size: [10, 6]
+  style: "whitegrid"
+  color_palette: "Set2"
