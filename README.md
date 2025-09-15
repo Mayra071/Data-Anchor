@@ -5,7 +5,13 @@
 [![Great Expectations](https://img.shields.io/badge/Great%20Expectations-0.17+-orange.svg)](https://greatexpectations.io/)
 [![Evidently AI](https://img.shields.io/badge/Evidently%20AI-0.2+-purple.svg)](https://www.evidentlyai.com/)
 
-A comprehensive, production-ready data science platform for automated data validation, drift detection, and machine learning model monitoring. Built with modular architecture and industry-standard tools for reliable data pipeline management.
+##🛡️ Data Anchor: Ensuring Trustworthy Data & Models with Drift Detection + Validation
+
+## ❓ Why Data Anchor?
+Machine learning systems fail silently when data changes.  
+Data Anchor prevents this by combining **Great Expectations** for validation  
+and **Evidently AI** for monitoring, giving you peace of mind that your data  
+pipelines stay healthy and your models remain reliable.
 
 ## 🚀 Overview
 
@@ -63,54 +69,6 @@ Data Anchor/
 - **Operating System**: Windows, macOS, or Linux
 - **Memory**: Minimum 4GB RAM recommended
 
-### Quick Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone <repository-url>
-   cd "Data Anchor"
-   ```
-
-2. **Automated setup** (Recommended):
-   ```bash
-   # Windows
-   setup.bat
-
-   # macOS/Linux
-   python setup.py
-   ```
-
-3. **Manual installation**:
-   ```bash
-   # Create virtual environment
-   python -m venv .venv
-
-   # Activate environment
-   # Windows:
-   .venv\Scripts\activate
-   # macOS/Linux:
-   source .venv/bin/activate
-
-   # Install dependencies
-   pip install -r requirements.txt
-   ```
-
-### Configuration
-
-Update `config.yaml` to customize:
-
-```yaml
-data:
-  raw_data_path: "../Data_Set/Titanic-Dataset.csv"  # Path to your dataset
-
-model:
-  test_size: 0.3
-  random_state: 42
-  target_column: "Survived"
-  features:
-    numerical: ['Age', 'SibSp', 'Parch', 'Fare']
-    categorical: ['Sex', 'Embarked', 'Pclass']
-```
 
 ## 🚀 Usage
 
@@ -131,47 +89,6 @@ This executes:
 6. Automated report generation
 
 ### Module-Level Usage
-
-#### Data Processing
-```python
-from src.data_processing.data_loader import DataLoader
-
-loader = DataLoader()
-df = loader.load_raw_data()
-quality_metrics = loader.analyze_data_quality(df)
-```
-
-#### Data Validation
-```python
-from src.validation.great_expectations_validator import GreatExpectationsValidator
-
-validator = GreatExpectationsValidator()
-validation_results = validator.validate_dataset(df)
-```
-
-#### Drift Detection
-```python
-from src.drift_detection.evidently_drift_detector import EvidentlyDriftDetector
-
-drift_detector = EvidentlyDriftDetector()
-snapshot, results = drift_detector.run_drift_detection(reference_data, current_data)
-```
-
-#### Model Training
-```python
-from src.ml.model_trainer import ModelTrainer
-
-trainer = ModelTrainer()
-results = trainer.train_and_evaluate(train_data, test_data)
-```
-
-#### Visualization
-```python
-from src.visualization.data_visualizer import DataVisualizer
-
-visualizer = DataVisualizer()
-visualizer.create_comprehensive_visualization(df, save_plots=True)
-```
 
 ## 📊 Core Modules
 
@@ -206,7 +123,21 @@ visualizer.create_comprehensive_visualization(df, save_plots=True)
   - Survival analysis visualizations
   - Feature importance plots
 
-## 📈 Generated Outputs
+## 📊 Results
+
+## Expectation validation
+
+## Calculating Metrics: 100%   41/41 [00:00<00:00, 491.16it/s]
+## Validation successful: True
+## Number of expectations: 21
+## Successful expectations: 21/21
+
+## Data drift result
+<img src="artifacts/Screenshot 2025-09-15 230446.png" alt="Confusion Matrix" width="400"/>
+
+<img src="artifacts/Screenshot 2025-09-15 230512.png" alt="Confusion Matrix" width="400"/>
+
+
 
 The platform generates comprehensive reports and artifacts:
 
@@ -271,6 +202,12 @@ python -m pytest tests/
 - **requests** (2.28.0+): HTTP client
 - **pyarrow** (12.0.0+): Data serialization
 - **pyyaml**: Configuration management
+
+
+## 📊 Example Reports
+- Data drift dashboard (Evidently)
+- Validation summary (Great Expectations)
+- Model performance tracking
 
 ## ⚠️ Known Issues
 
