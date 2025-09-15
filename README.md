@@ -127,16 +127,17 @@ This executes:
 
 ## Expectation validation
 
- Calculating Metrics: 100%   41/41 [00:00<00:00, 491.16it/s]
+ Calculating Metrics: 100%  ---------------------  41/41 [00:00<00:00, 491.16it/s]
 ## Validation successful: True
  Number of expectations: 21
  Successful expectations: 21/21
 
 ## Data drift result
-<img src="artifacts/Screenshot 2025-09-15 230446.png" alt="Confusion Matrix" width="400"/>
+<img src="artifacts/Drift.png" alt="Not Drifted" />
+<img src="artifacts/CM1.png" alt="Confusion Matrix" />
 
-<img src="artifacts/Screenshot 2025-09-15 230512.png" alt="Confusion Matrix" width="400"/>
-
+<img src="artifacts/Drifted.png" alt="Drifted" />
+<img src="artifacts/CM2.png" alt="Confusion Matrix" />
 
 
 The platform generates comprehensive reports and artifacts:
@@ -148,6 +149,9 @@ The platform generates comprehensive reports and artifacts:
 - `drift_comparison_report.html` - Comparative drift analysis
 - `comprehensive_summary.json` - Complete execution summary
 - Various PNG visualizations (distributions, correlations, etc.)
+
+<img src="artifacts/Report Dashboard.png" alt="Reports"/>
+
 
 ### Data Directory (`data/`)
 - `reference.parquet` - Reference dataset for drift detection
