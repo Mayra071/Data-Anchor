@@ -225,7 +225,7 @@ For questions, issues, or contributions:
 
 - **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
 - **Documentation**: See `docs/` directory for detailed guides
-- **Email**: [your-email@example.com]
+- **Email**: [aryam7842@example.com]
 
 ---
 
