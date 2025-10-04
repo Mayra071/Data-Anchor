@@ -18,7 +18,6 @@ pipelines stay healthy and your models remain reliable.
 Data Anchor provides a complete solution for data quality assurance and monitoring in machine learning pipelines. The platform integrates multiple validation layers to ensure data integrity, detect distribution shifts, and monitor model performance over time.
 
 ### Key Capabilities
-
 - **Automated Data Validation**: Comprehensive quality checks using Great Expectations
 - **Drift Detection**: Real-time monitoring of data and model drift with Evidently AI
 - **Machine Learning Pipeline**: End-to-end model training and evaluation
@@ -185,11 +184,6 @@ The platform generates comprehensive reports and artifacts:
 - Data drift dashboard (Evidently)
 - Validation summary (Great Expectations)
 - Model performance tracking
-
-## ⚠️ Known Issues
-
-- **Model Variable Error**: Current TODO item to fix 'model' variable reference in main.py execution flow
-- **Feature Importance Timing**: Visualization block needs repositioning after model training completion
 
 ## 🤝 Contributing
 
